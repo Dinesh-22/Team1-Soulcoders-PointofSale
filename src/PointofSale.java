@@ -229,7 +229,7 @@ public class PointofSale extends javax.swing.JFrame {
         txtbill.setText(txtbill.getText() + "                                POSBILL                          \n");
         //txtbill.setFont(txtbill.getFont().deriveFont(Font.BOLD, 13f));
 
-        txtbill.setText(txtbill.getText() + "*********************************************************\n");   
+        txtbill.setText(txtbill.getText() + "************************************************************\n");   
          //Heading
           txtbill.setText(txtbill.getText() + "Product" + "\t" + "Price" + "\t" + "Amount" + "\n"  ); 
         
@@ -243,7 +243,7 @@ public class PointofSale extends javax.swing.JFrame {
           txtbill.setText(txtbill.getText() + "\n");       
           txtbill.setText(txtbill.getText() + "\t" +  "FINAL AMOUNT : " + total + "\n");
           txtbill.setText(txtbill.getText() + "\n");
-          txtbill.setText(txtbill.getText() + "*********************************************************\n");
+          txtbill.setText(txtbill.getText() + "************************************************************\n");
           txtbill.setText(txtbill.getText() + "           THANK YOU COME AGAIN             \n");
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
