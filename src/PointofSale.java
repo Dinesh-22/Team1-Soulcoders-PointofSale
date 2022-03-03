@@ -277,6 +277,7 @@ public class PointofSale extends javax.swing.JFrame {
         txtprice.setText("");
         txtquantity.setText("");
         txtid.requestFocus();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void txtidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtidKeyReleased
