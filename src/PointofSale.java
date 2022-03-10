@@ -284,6 +284,7 @@ public class PointofSale extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            //DB INTEGRATION
             con = DriverManager.getConnection("jdbc:mysql://localhost/rbc","root","");
             String id = txtid.getText();
             
