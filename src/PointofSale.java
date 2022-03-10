@@ -223,27 +223,36 @@ public class PointofSale extends javax.swing.JFrame {
   public void bill()
     {
         String total = txttotal.getText();
+        String gst = txtgst.getText();
+        double finalamount = Integer.parseInt(total)+Double.parseDouble(gst);
+ 
+        double points = finalamount/10;
         DefaultTableModel model = new DefaultTableModel();
         model = (DefaultTableModel)jTable1.getModel(); 
-        txtbill.setText(txtbill.getText() + "********************************************************\n");
-        txtbill.setText(txtbill.getText() + "                                POSBILL                          \n");
+        txtbill.setText(txtbill.getText() + "*********************************************************************************\n");
+        txtbill.setText(txtbill.getText() + "                                GOOD WILL SUPERMARKET                            \n");
+        txtbill.setText(txtbill.getText() + "Address: Shop No-94, Meenambal Salai, Krishnamoorthy Nagar, Chennai   \n");
         //txtbill.setFont(txtbill.getFont().deriveFont(Font.BOLD, 13f));
-
+        txtbill.setText(txtbill.getText() + "                                                    \n");
         txtbill.setText(txtbill.getText() + "************************************************************\n");   
          //Heading
-          txtbill.setText(txtbill.getText() + "Product" + "\t" + "Price" + "\t" + "Amount" + "\n"  ); 
+        txtbill.setText(txtbill.getText() + "Product" + "\t" + "Price" + "\t" + "Quantity" + "\t" + "Amount" + "\n"  );
         
           for(int i = 0; i < model.getRowCount(); i++)
           {              
               String pname = (String)model.getValueAt(i, 0);
               int price = (Integer)model.getValueAt(i, 1);
+              int quantity = (Integer)model.getValueAt(i, 2);
               int amount = (Integer)model.getValueAt(i, 3);        
-              txtbill.setText(txtbill.getText() + pname  + "\t" + price + "\t" + amount  + "\n"  );
+              txtbill.setText(txtbill.getText() + pname  + "\t" + price + "\t" + quantity + "\t" + amount  + "\n"  );
           }   
-          txtbill.setText(txtbill.getText() + "\n");       
-          txtbill.setText(txtbill.getText() + "\t" +  "FINAL AMOUNT : " + total + "\n");
+          txtbill.setText(txtbill.getText() + "\n"); 
+          txtbill.setText(txtbill.getText() + "\t" +  "Total amount : " + total + "\n");
+          txtbill.setText(txtbill.getText() + "\t" +  "GST for Total Amount : " + gst + "\n");
+          txtbill.setText(txtbill.getText() + "\t" +  "Final amount  : " + finalamount + "\n");
+          txtbill.setText(txtbill.getText() + "\t" +  "Points earned by customer : " + points + "\n");
           txtbill.setText(txtbill.getText() + "\n");
-          txtbill.setText(txtbill.getText() + "************************************************************\n");
+          txtbill.setText(txtbill.getText() + "********************************************************************\n");
           txtbill.setText(txtbill.getText() + "           THANK YOU COME AGAIN             \n");
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -271,7 +280,8 @@ public class PointofSale extends javax.swing.JFrame {
         }
         
         txttotal.setText(Integer.toString(sum));
-        
+        double gst = sum *0.18;
+        txtgst.setText(Double.toString(gst)); 
         txtid.setText("");
         txtpname.setText("");
         txtprice.setText("");
@@ -317,6 +327,7 @@ public class PointofSale extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
         txttotal.setText("");
+        txtgst.setText("");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
