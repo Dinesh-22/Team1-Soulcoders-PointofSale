@@ -234,7 +234,7 @@ public class PointofSale extends javax.swing.JFrame {
         txtbill.setText(txtbill.getText() + "Address: Shop No-94, Meenambal Salai, Krishnamoorthy Nagar, Chennai   \n");
         //txtbill.setFont(txtbill.getFont().deriveFont(Font.BOLD, 13f));
         txtbill.setText(txtbill.getText() + "                                                    \n");
-        txtbill.setText(txtbill.getText() + "************************************************************\n");   
+        txtbill.setText(txtbill.getText() + "**********************************************************************************\n");   
          //Heading
         txtbill.setText(txtbill.getText() + "Product" + "\t" + "Price" + "\t" + "Quantity" + "\t" + "Amount" + "\n"  );
         
